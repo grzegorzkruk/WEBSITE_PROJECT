@@ -1,0 +1,12 @@
+.eko__bar--info{
+  width: 100%;
+  background-color: $theme-color-blue;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  overflow: hidden;
+  h2{
+    margin: 1%;
+    font-size: 1.5rem;
+  }
+}

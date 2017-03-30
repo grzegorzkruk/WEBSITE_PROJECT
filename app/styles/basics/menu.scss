@@ -1,0 +1,25 @@
+$menu-height: 50px;
+
+.eko__menu{
+  position: relative;
+  top: $header-height;
+  height: $menu-height;
+  width: 100%;
+  z-index: 9001;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  a{
+    min-width: 100px;
+    text-align: center;
+    display: inline-block;
+    line-height: $menu-height;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+    &:hover, &.active{
+      background-color: white;
+      color: black;
+    }
+  }
+}

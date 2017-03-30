@@ -1,0 +1,42 @@
+.eko__footer{
+  position: relative;
+  bottom: 0;
+  background-color: $theme-color-blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+	-ms-flex-pack: center;
+  justify-content: center;
+  div{
+    margin: 10px;
+    &::after{
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h1, p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &::after{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+  &-logo{
+    width: 10%;
+    vertical-align: middle;
+  }
+  &-contact{
+    text-align: center;
+  }
+  &-adress{
+    width: 30%;
+    text-align: right;
+  }
+}
