@@ -14,8 +14,4 @@ angular.module('ekoWebSite')
       'AngularJS',
       'Karma'
     ];
-    $scope.isActive = function (viewLocation) {
-        var active = (viewLocation === $location.path());
-        return active;
-    };
   });

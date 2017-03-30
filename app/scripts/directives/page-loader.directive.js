@@ -7,11 +7,10 @@ angular.module('ekoWebSite')
                     speedIn: 500,
                     easingIn: mina.easeinout
                 });
-            var menu = angular.element(document).find('.eko__menu');
-            $rootScope.$on('$routeChangeStart', function() {
+            $rootScope.$on('$stateChangeStart', function() {
                 loader.show();
             });
-            $rootScope.$on('$routeChangeSuccess', function() {
+            $rootScope.$on('$stateChangeSuccess', function() {
                 $timeout(function(){
                     loader.hide();
                 }, 1000);

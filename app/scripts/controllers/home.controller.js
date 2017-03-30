@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name test4App.controller:MainCtrl
+ * @name ekoWebSite.controller:HomeCtrl
  * @description
- * # MainCtrl
- * Controller of the test4App
+ * # HomeCtrl
+ * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
   .controller('HomeCtrl', function () {

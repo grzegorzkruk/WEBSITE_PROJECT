@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name test4App
+ * @name ekoWebSite
  * @description
- * # test4App
+ * # ekoWebSite
  *
  * Main module of the application.
  */
@@ -22,28 +22,24 @@ angular
       
       .state('home', {
           url: '/',
-          abstract: true,
           templateUrl: 'views/home.html',
           controller: 'HomeCtrl'
       })
       .state('about', {
           url: '/about',
-          abstract: true,
           templateUrl: 'views/about.html',
           controller: 'AboutCtrl'
       })
       .state('prices', {
           url: '/prices',
-          abstract: true,
           templateUrl: 'views/prices.html',
           controller: 'PricesCtrl'
       })
       .state('contact', {
           url: '/contact',
-          abstract: true,
           templateUrl: 'views/contact.html',
           controller: 'ContactCtrl'
       })
 
-      $urlRouterProvider.otherwise('/app');
+      $urlRouterProvider.otherwise('/');
   });

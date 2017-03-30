@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name test4App.controller:AboutCtrl
+ * @name ekoWebSite.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the test4App
+ * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
   .controller('AboutCtrl', function () {

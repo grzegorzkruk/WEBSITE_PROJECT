@@ -1,0 +1,15 @@
+<div id="eko-products" class="eko__grid row list-group">
+    <icon-loader ng-repeat="icon in icons" iconName="{{icon.icon}}"></icon-loader>
+    <div class="item  col-sm-6 col-md-4" ng-repeat="icon in icons">
+        <div class="eko__grid--item">
+            <a href="#" class="eko__grid--icon">
+                <svg viewBox="0 0 80 80" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="{{icon.icon}}"  x="0" y="0" />
+                </svg>
+            </a>
+        </div>
+        <div class="eko__grid--title">
+            <h2>{{icon.title}}</h2>
+        </div>
+    </div>
+</div>
