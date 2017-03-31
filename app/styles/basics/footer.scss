@@ -1,7 +1,6 @@
 .eko__footer{
   position: relative;
   bottom: 0;
-  background-color: $theme-color-blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,8 +8,8 @@
   -webkit-box-pack: center;
 	-ms-flex-pack: center;
   justify-content: center;
+  background: $theme-color-blue;
   div{
-    margin: 10px;
     &::after{
       content: '';
       height: 100%;
@@ -38,5 +37,31 @@
   &-adress{
     width: 30%;
     text-align: right;
+  }
+}
+
+$svgBg: "data:image/svg+xml;utf8,<svg style='display: none'><symbol id='eko__content-bg' viewBox='0 0 320 714.02'><g><path class='eko__content-bg--color1' d='M482.09,547.67S733.85,311,801.85,362V1068.8h-320' transform='translate(-481.85 -354.78)'/><path class='eko__content-bg--color2' d='M482.09,566S733.85,337.63,801.85,386.83v682h-320' transform='translate(-481.85 -354.78)'/></g></svg>";
+
+
+.eko__content-bg {
+  &--color1{
+    fill: #8cc63f;
+  }
+  &--color2{
+    fill: $theme-color-blue;
+  }
+  &-wrapper{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 150%;
+    overflow: hidden;
+    z-index: -1;
+    top: -170px;
+    svg{
+      position: ralative;
+      width: 100%;
+      height: 100%;
+    }
   }
 }

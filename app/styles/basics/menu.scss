@@ -22,4 +22,28 @@ $menu-height: 50px;
       color: black;
     }
   }
+  @media screen and (max-width: 500px){
+    position: fixed;
+    width: 100%;
+    background: black;
+    .open{
+      height: 100%;
+    }
+    a{
+      display: none;
+      width: 100%;
+      text-align: center;
+      display: block;
+      line-height: $menu-height;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      transition: all .5s;
+      font-size: 32px;
+      &:hover, &.active{
+        background-color: white;
+        color: black;
+      }
+    }
+  }
 }

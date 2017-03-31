@@ -1,40 +1,40 @@
 [{
     "icon": "eko__buildings",
-    "title": ""
+    "title": "DOM"
 },
 {
     "icon": "eko__car",
-    "title": ""
+    "title": "SAMOCHÓD"
 },
 {
     "icon": "eko__desinfection",
-    "title": ""
+    "title": "DEZYNFEKCJA"
 },
 {
     "icon": "eko__hotels",
-    "title": ""
+    "title": "HOTEL/GASTRONOMIA"
 },
 {
     "icon": "eko__industry",
-    "title": ""
+    "title": "PRZEMYSŁ"
 },
 {
     "icon": "eko__pavement",
-    "title": ""
+    "title": "ELEWACJE/KOSTKI BRUKOWE"
 },
 {
     "icon": "eko__school",
-    "title": ""
+    "title": "SZKOŁA/PRZEDSZKOLE"
 },
 {
     "icon": "eko__special",
-    "title": ""
+    "title": "USŁUGI SPECJALNE"
 },
 {
     "icon": "eko__touchless",
-    "title": ""
+    "title": "SAMOOBSŁUGOWY ODKURZACZ PAROWY"
 },
 {
     "icon": "eko__wheel",
-    "title": ""
+    "title": "KOMUNIKACJA"
 }]

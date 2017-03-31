@@ -32,10 +32,7 @@
     text-align: center;
     h2{
       margin: 0;
-      font-size: 32px;
-      @media screen and (max-width: 500px){
-        font-size: 42px;
-      }
+      font-size: 24px;
     }
   }
 }
