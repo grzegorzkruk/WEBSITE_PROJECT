@@ -5,8 +5,15 @@
   width: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
+  .carousel, 
+  .carousel-inner, 
+  .carousel-inner .item, img {
+      height: 100%;
+      
+  }
   &--img{
     height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
   }
@@ -21,4 +28,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.item:nth-child(1) {
+    background: #74C390;
+}
+
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+
+.item:nth-child(3) {
+    background: #E46653;
 }

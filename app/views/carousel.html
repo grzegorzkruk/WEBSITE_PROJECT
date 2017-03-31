@@ -1,5 +1,15 @@
 <div class="eko__carousel">
-  <div class="eko__carousel--img" style="background-image: url(https://s-media-cache-ak0.pinimg.com/originals/9b/53/08/9b530850015effb2b6eb4c52a89d5ff8.jpg)"></div>
+  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="item" ng-class="($index==0) ? 'active' : ''" ng-repeat="photo in photos">
+          <div class="eko__carousel--img" style="background-image: url({{photo.src}})" alt="{{photo.alt}}" />
+        </div>
+    </div>
+    <ol class="carousel-indicators">
+        <li ng-repeat="photo in photos" data-target="#carousel" data-slide-to="{{$index}}" ng-class="($index==0) ? 'active' : ''"></li>
+    </ol>
+  </div>
+  
   <div class="eko__title"> 
     <h1>Ekowash - mobilne myjnie parowe.</h1>
   </div>

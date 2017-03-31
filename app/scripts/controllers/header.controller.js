@@ -41,10 +41,10 @@ angular.module('ekoWebSite')
 
 
         
-        var time = 0;
+        var time = 500;
         $timeout(AnimateLeaf, time);
 
-        time += 500;
+        time += 1000;
         $timeout(AnimateBubbles, time);
 
         time += 1000;

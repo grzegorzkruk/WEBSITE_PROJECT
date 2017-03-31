@@ -8,13 +8,18 @@
  * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
-  .controller('ekoIconsGridCtrl', function ($http) {
+  .controller('ekoIconsGridCtrl', function ($http, $scope, $log) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    $http.get('content/eko-icons-grid.json').success(function(response) {
-        $scope.icons = response;
+    var vm = this;
+    vm.icons = [];
+    $http.get('content/eko-icons-grid.json').then(function (success){
+        $log.info(success.data);
+        $scope.icons = success.data;
+    },function (error){
+        $log.error("Nie udało się pobrać listy ikon");
     });
   });
