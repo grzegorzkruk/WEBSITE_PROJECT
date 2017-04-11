@@ -1,0 +1,133 @@
+$menu-height: 50px;
+.menu-items-wrapper {
+    position: absolute;
+    right: $menu-height;
+    @media screen and (max-width: 500px) {
+        display: none;
+        width: 100%;
+        background: black;
+        right: $menu-height;
+    }
+}
+
+.open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+    .open {
+        height: 100%;
+    }
+    a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        display: block;
+        line-height: $menu-height;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        transition: all .5s;
+        font-size: 32px;
+        &:hover,
+        &.active {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.menu-burger-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .2s ease-in-out;
+    z-index: 9999;
+}
+
+$menu-burger-size: $menu-height;
+$menu-burger-line: 4px;
+$menu-burger-bread-width: $menu-burger-size - 2 * $menu-burger-line;
+$menu-burger-bread1-top: $menu-burger-size - 3 * $menu-burger-line;
+$menu-burger-bread2-top: 2 * $menu-burger-line;
+$menu-burger-meat-width: $menu-burger-bread-width * 0.8;
+$menu-burger-middle: $menu-burger-size/2 - $menu-burger-line/2;
+.menu-burger {
+    width: $menu-burger-size;
+    height: $menu-burger-size;
+    border: none;
+    background: transparent;
+    float: right;
+    position: relative;
+    transition: all .2s ease-in-out;
+    @media screen and (min-width: 500px) {
+        display: none;
+        width: 100%;
+        background: black;
+        right: $menu-height;
+    }
+    span,
+    &::after,
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: $menu-burger-bread-width;
+        height: $menu-burger-line;
+        background: black;
+        transition: all .2s ease-in-out;
+        left: $menu-burger-line;
+        background: white;
+    }
+    span {
+        top: $menu-burger-middle;
+        left: $menu-burger-line * 2;
+        width: $menu-burger-meat-width;
+    }
+    &::after {
+        top: $menu-burger-bread1-top;
+    }
+    &::before {
+        top: $menu-burger-bread2-top;
+    }
+    &:hover {
+        background: white;
+        span,
+        &::after,
+        &::before {
+            background: black;
+        }
+        span {
+            left: $menu-burger-size/2 - ($menu-burger-size * 0.6)/2;
+            width: $menu-burger-size * 0.6;
+        }
+        &::after {
+            top: $menu-burger-size - 3.5 * $menu-burger-line;
+        }
+        &::before {
+            top: 2.5 * $menu-burger-line;
+        }
+    }
+    &.active {
+        background: white;
+        span {
+            left: $menu-burger-middle;
+            width: 0;
+            background: black;
+        }
+        &::after {
+            top: $menu-burger-middle;
+            transform: rotate(45deg);
+            background: black;
+        }
+        &::before {
+            top: $menu-burger-middle;
+            transform: rotate(-45deg);
+            background: black;
+        }
+    }
+}

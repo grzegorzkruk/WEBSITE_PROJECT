@@ -1,53 +1,102 @@
-.eko__grid{
-  .item{
-    margin: 20px 0;
-  }
-  &--item{
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-    &::after{
-      content: '';
-      height: 100%;
-      display: inline-block;
-      vertical-align: middle;
+.eko__grid {
+    margin: auto;
+    .item {
+        margin: 20px 0;
+        transition: all .5s;
     }
-  }
-  &--icon{
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    vertical-align: middle;
-    @media screen and (max-width: 500px){
-      width: 200px;
-      height: 200px;
+    &--item {
+        color: white;
+        text-align: center;
     }
-    svg, use{
-      height: 100%;
-      width: 100%;
+    &--icon {
+        width: 300px;
+        height: 300px;
+        background: #172d51;
+        border-radius: 4vw;
+        display: inline-block;
+        vertical-align: middle;
+        @media screen and (max-width: 767px) {
+            width: 200px;
+            height: 200px;
+        }
+        svg,
+        use {
+            height: 100%;
+            width: 100%;
+        }
     }
-  }
-  &--title{
-    margin: 0;
-    text-align: center;
-    h2{
-      margin: 0;
-      font-size: 24px;
+    &--title {
+        margin: 0;
+        text-align: center;
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
     }
-  }
+    @media screen and (max-width: 767px) {
+        &--icon {
+            max-width: 30vw;
+            max-height: 30vw;
+        }
+        &--title {
+            h2 {
+                font-size: 15px;
+            }
+        }
+    }
 }
 
-.icon-bg {
-  fill: #172d51;
+.eko__grid--icon {
+    background: #172d51;
+}
+
+.grid__item-active {
+    background: #8cc63f;
+}
+.icon-bg{
+    fill: #172d51;
 }
 
 .icon-content {
-  fill: #fff;
-  fill-rule: evenodd;
+    fill: #fff;
+    fill-rule: evenodd;
+}
+
+.icon-content-stroke{
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.icon-content-fillnone{
+    fill: none;
 }
 
 .icon-line {
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+.horizontal {
+    .eko__grid--icon {
+        max-width: 7vw;
+        max-height: 7vw;
+        border-radius: 2vw;
+    }
+    .eko__grid--title {
+        display: none;
+    }
+    @media screen and (max-width: 767px) {
+        .item {
+            padding: 0;
+        }
+        .eko__grid--icon {
+            max-width: 15vw;
+            max-height: 15vw;
+            border-radius: 2vw;
+        }
+        .eko__grid--title {
+            display: none;
+        }
+    }
 }

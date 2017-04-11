@@ -1,40 +1,61 @@
 [{
-    "icon": "eko__buildings",
-    "title": "DOM"
-},
-{
-    "icon": "eko__car",
-    "title": "SAMOCHÓD"
-},
-{
-    "icon": "eko__desinfection",
-    "title": "DEZYNFEKCJA"
-},
-{
-    "icon": "eko__hotels",
-    "title": "HOTEL/GASTRONOMIA"
-},
-{
-    "icon": "eko__industry",
-    "title": "PRZEMYSŁ"
-},
-{
-    "icon": "eko__pavement",
-    "title": "ELEWACJE/KOSTKI BRUKOWE"
-},
-{
-    "icon": "eko__school",
-    "title": "SZKOŁA/PRZEDSZKOLE"
-},
-{
-    "icon": "eko__special",
-    "title": "USŁUGI SPECJALNE"
-},
-{
-    "icon": "eko__touchless",
-    "title": "SAMOOBSŁUGOWY ODKURZACZ PAROWY"
-},
-{
-    "icon": "eko__wheel",
-    "title": "KOMUNIKACJA"
-}]
+        "icon": "eko__buildings",
+        "url": "home.house",
+        "title": "DOM"
+    },
+    {
+        "icon": "eko__car",
+        "url": "home.car",
+        "title": "SAMOCHÓD"
+    },
+    {
+        "icon": "eko__desinfection",
+        "url": "home.desinfection",
+        "title": "DEZYNFEKCJA"
+    },
+    {
+        "icon": "eko__hotels",
+        "url": "home.hotels",
+        "title": "HOTEL/GASTRONOMIA"
+    },
+    {
+        "icon": "eko__industry",
+        "url": "home.industry",
+        "title": "PRZEMYSŁ"
+    },
+    {
+        "icon": "eko__pavement",
+        "url": "home.elevations",
+        "title": "ELEWACJE/KOSTKI BRUKOWE"
+    },
+    {
+        "icon": "eko__school",
+        "url": "home.schools",
+        "title": "SZKOŁA/PRZEDSZKOLE"
+    },
+    {
+        "icon": "eko__special",
+        "url": "home.special",
+        "title": "USŁUGI SPECJALNE"
+    },
+    {
+        "icon": "eko__touchless",
+        "url": "home.touchless",
+        "title": "EKOWASH MYJNIE BEZDOTYKOWE"
+    },
+    {
+        "icon": "eko__wheel",
+        "url": "home.communication",
+        "title": "KOMUNIKACJA"
+    },
+    {
+        "icon": "eko__office",
+        "url": "home.office",
+        "title": "BIURO"
+    },
+    {
+        "icon": "eko__selfservice",
+        "url": "home.selfservice",
+        "title": "SAMOOBSŁUGOWY ODKURZACZ PAROWY"
+    }
+]

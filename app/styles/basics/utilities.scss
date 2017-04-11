@@ -1,0 +1,31 @@
+.ng-enter {
+    opacity: 1;
+}
+
+.ng-leave {
+    opacity: 0;
+    height: 0;
+}
+
+.eko__main-view {
+    transition: all 0.5s;
+}
+
+.page-hide {
+    opacity: 0;
+}
+
+.page-show {
+    opacity: 1;
+}
+
+.eko__copyright {
+    width: 100vw;
+    background: #172D51;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    &::before {
+        content: '\00a9';
+    }
+}

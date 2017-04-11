@@ -1,49 +1,89 @@
 $menu-height: 50px;
+body {
+    margin: 0;
+}
 
-.eko__menu{
-  position: relative;
-  top: $header-height;
-  height: $menu-height;
-  width: 100%;
-  z-index: 9001;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: right;
-  a{
-    min-width: 100px;
-    text-align: center;
-    display: inline-block;
-    line-height: $menu-height;
-    text-transform: uppercase;
-    color: white;
-    text-decoration: none;
-    transition: all .5s;
-    &:hover, &.active{
-      background-color: white;
-      color: black;
-    }
-  }
-  @media screen and (max-width: 500px){
-    position: fixed;
+.eko__menu {
+    position: absolute;
+    top: 100px;
+    height: $menu-height;
     width: 100%;
+    z-index: 9001;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    transition: all .5s;
+    &-links {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    &.sticky {
+        position: fixed;
+        top: 0;
+    }
+    a {
+        min-width: 100px;
+        text-align: center;
+        display: inline-block;
+        line-height: $menu-height;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        outline: none;
+        transition: all .5s;
+        &:hover,
+        &.active {
+            background-color: white;
+            color: black;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        a {
+            display: none;
+        }
+    }
+}
+
+.menu-items-wrapper {
+    position: absolute;
+    right: $menu-height;
+    @media screen and (max-width: 500px) {
+        display: none;
+        width: 100%;
+        background: black;
+        right: $menu-height;
+    }
+}
+
+.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: block;
+    width: 100%;
+    height: 100%;
     background: black;
-    .open{
-      height: 100%;
+    .open {
+        height: 100%;
     }
-    a{
-      display: none;
-      width: 100%;
-      text-align: center;
-      display: block;
-      line-height: $menu-height;
-      text-transform: uppercase;
-      color: white;
-      text-decoration: none;
-      transition: all .5s;
-      font-size: 32px;
-      &:hover, &.active{
-        background-color: white;
-        color: black;
-      }
+    a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        display: block;
+        line-height: $menu-height;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        transition: all .5s;
+        font-size: 32px;
+        &:hover,
+        &.active {
+            background-color: white;
+            color: black;
+        }
     }
-  }
 }

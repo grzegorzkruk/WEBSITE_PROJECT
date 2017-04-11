@@ -1,0 +1,10 @@
+.eko__article {
+    margin: 30px;
+    color: #172D51;
+    &-centered{
+        text-align: center;
+    }
+    &.bg-blue{
+        background: #9EC4E8;
+    }
+}

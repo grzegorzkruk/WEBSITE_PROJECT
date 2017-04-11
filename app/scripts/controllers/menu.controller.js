@@ -2,16 +2,23 @@
 
 /**
  * @ngdoc function
- * @name ekoWebSite.controller:HeaderCtrl
+ * @name ekoWebSite.controller:MenuCtrl
  * @description
- * # HeaderCtrl
+ * # MenuCtrl
  * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
-  .controller('HeaderCtrl', function ($scope, $location) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MenuCtrl', function($scope, $location, $window) {
+        this.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
+        $scope.isOpenMenu = false;
+        $scope.toggleMenu = function() {
+            $scope.isOpenMenu = !$scope.isOpenMenu;
+        };
+        $scope.closeMenu = function() {
+            $scope.isOpenMenu = false;
+        };
+    });

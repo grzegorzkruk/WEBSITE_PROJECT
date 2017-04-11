@@ -1,18 +1,20 @@
-<div id="eko-products" class="eko__grid row list-group">
-    <icon-loader name="eko__buildings"></icon-loader>
-    <icon-loader name="eko__car"></icon-loader>
-    <icon-loader name="eko__desinfection"></icon-loader>
-    <icon-loader name="eko__hotels"></icon-loader>
-    <icon-loader name="eko__industry"></icon-loader>
-    <icon-loader name="eko__pavement"></icon-loader>
-    <icon-loader name="eko__school"></icon-loader>
-    <icon-loader name="eko__special"></icon-loader>
-    <icon-loader name="eko__touchless"></icon-loader>
-    <icon-loader name="eko__wheel"></icon-loader>
-    <div class="item  col-sm-6 col-md-4" ng-repeat="icon in icons">
+<icon-loader name="eko__buildings"></icon-loader>
+<icon-loader name="eko__car"></icon-loader>
+<icon-loader name="eko__desinfection"></icon-loader>
+<icon-loader name="eko__hotels"></icon-loader>
+<icon-loader name="eko__industry"></icon-loader>
+<icon-loader name="eko__pavement"></icon-loader>
+<icon-loader name="eko__school"></icon-loader>
+<icon-loader name="eko__special"></icon-loader>
+<icon-loader name="eko__touchless"></icon-loader>
+<icon-loader name="eko__wheel"></icon-loader>
+<icon-loader name="eko__selfservice"></icon-loader>
+<icon-loader name="eko__office"></icon-loader>
+<div id="eko-products" class="eko__grid row">
+    <div class="item  col-xs-6 col-md-4" ng-repeat="icon in icons">
         <div class="eko__grid--item">
-            <a href="#" class="eko__grid--icon">
-                <svg viewBox="0 0 80 80" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <a ui-sref="{{icon.url}}" ui-sref-active="grid__item-active" class="eko__grid--icon" ng-click="changeLayout()">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink">
                     <use xlink:href="{{'#' + icon.icon}}"  x="0" y="0" />
                 </svg>
             </a>

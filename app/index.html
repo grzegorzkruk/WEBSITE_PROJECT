@@ -2,93 +2,103 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
+    <meta charset="utf-8">
+    <base href="/" />
+    <title>EKOWASH</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
 
 <body ng-app="ekoWebSite">
-  <!--[if lte IE 8]>
+    <!--[if lte IE 8]>
       <p class="browsehappy">Używasz <strong>przestarzałej</strong> przeglądarki. Zainstaluj nowszą <a href="http://browsehappy.com/">przeglądarkę</a>.</p>
     <![endif]-->
-  <eko-header></eko-header>
-  <eko-page-loader></eko-page-loader>
-  <eko-menu></eko-menu>
-  <eko-carousel></eko-carousel>
-  <eko-info-bar></eko-info-bar>
+    <eko-page-loader></eko-page-loader>
+    <div class="eko__website">
+        <eko-header></eko-header>
+        <eko-menu></eko-menu>
+        <eko-carousel></eko-carousel>
+        <eko-info-bar></eko-info-bar>
 
-  <div ui-view></div>
+        <div ui-view class="eko__main-view" ng-class="(isPageLoading) ? 'page-hide' : 'page-show'"></div>
+        <div class="eko__main-view">
+            <eko-icons-grid class="container"></eko-icons-grid>
+        </div>
+        <eko-dialer></eko-dialer>
+        <eko-footer></eko-footer>
+    </div>
+    
 
-  <eko-footer></eko-footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        ! function(A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/utilities/classie.js"></script>
+    <script src="scripts/utilities/tools.js"></script>
+    <script src="scripts/utilities/svgloader.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/menu.controller.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/about.controller.js"></script>
+    <script src="scripts/controllers/prices.controller.js"></script>
+    <script src="scripts/controllers/contact.controller.js"></script>
+    <script src="scripts/controllers/header.controller.js"></script>
+    <script src="scripts/controllers/eko-icons-grid.controller.js"></script>
+    <script src="scripts/controllers/carousel.controller.js"></script>
 
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-  <script>
-    !function (A, n, g, u, l, a, r) {
-      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-        (A[l].q = A[l].q || []).push(arguments)
-      }, A[l].l = +new Date, a = n.createElement(g),
-        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <script src="scripts/directives/header.directive.js"></script>
+    <script src="scripts/directives/footer.directive.js"></script>
+    <script src="scripts/directives/menu.directive.js"></script>
+    <script src="scripts/directives/carousel.directive.js"></script>
+    <script src="scripts/directives/info-bar.directive.js"></script>
+    <script src="scripts/directives/page-loader.directive.js"></script>
+    <script src="scripts/directives/icon-loader.directive.js"></script>
+    <script src="scripts/directives/eko-icons-grid.directive.js"></script>
+    <script src="scripts/directives/dialer.directive.js"></script>
 
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-  <script src="bower_components/angular-touch/angular-touch.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/utilities/classie.js"></script>
-  <script src="scripts/utilities/tools.js"></script>
-  <script src="scripts/utilities/svgloader.js"></script>
-
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/menu.controller.js"></script>
-  <script src="scripts/controllers/home.controller.js"></script>
-  <script src="scripts/controllers/about.controller.js"></script>
-  <script src="scripts/controllers/prices.controller.js"></script>
-  <script src="scripts/controllers/contact.controller.js"></script>
-  <script src="scripts/controllers/header.controller.js"></script>
-  <script src="scripts/controllers/eko-icons-grid.controller.js"></script>
-  <script src="scripts/controllers/carousel.controller.js"></script>
-  
-
-  <script src="scripts/directives/header.directive.js"></script>
-  <script src="scripts/directives/footer.directive.js"></script>
-  <script src="scripts/directives/menu.directive.js"></script>
-  <script src="scripts/directives/carousel.directive.js"></script>
-  <script src="scripts/directives/info-bar.directive.js"></script>
-  <script src="scripts/directives/page-loader.directive.js"></script>
-  <script src="scripts/directives/icon-loader.directive.js"></script>
-  <script src="scripts/directives/eko-icons-grid.directive.js"></script>
-
-  
-  <!-- endbuild -->
+    <!-- endbuild -->
 
 </body>
 

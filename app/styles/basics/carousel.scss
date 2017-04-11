@@ -17,6 +17,17 @@
     background-size: cover;
     background-position: center;
   }
+  .item:nth-child(1) {
+    background: #74C390;
+    }
+
+    .item:nth-child(2) {
+        background: #51BCE8;
+    }
+
+    .item:nth-child(3) {
+        background: #E46653;
+    }
 }
 
 .eko__title{
@@ -28,16 +39,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-}
-
-.item:nth-child(1) {
-    background: #74C390;
-}
-
-.item:nth-child(2) {
-    background: #51BCE8;
-}
-
-.item:nth-child(3) {
-    background: #E46653;
 }

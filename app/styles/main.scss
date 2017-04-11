@@ -2,14 +2,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-
-
-@import "theme.variables";
-
+$theme-color-blue: #172D51;
 @import "basics/header";
 @import "basics/footer";
 @import "basics/menu";
+@import "basics/menu-burger";
 @import "basics/carousel";
 @import "basics/infobar";
 @import "basics/pageloader";
 @import "basics/eko-icons-grid";
+@import "basics/utilities";
+@import "basics/article";
+@import "basics/dialer";
+@import "basics/tables";
