@@ -1,7 +1,6 @@
-# test4
+# Angular website
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+This is angular based website project
 
 ## Build & development
 
