@@ -8,7 +8,7 @@
  * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
-  .controller('RealisationsCtrl', function ($scope) {
+  .controller('RealisationsCtrl', function ($scope, $http, $log) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -19,21 +19,5 @@ angular.module('ekoWebSite')
         $scope.images = success.data;
     },function (error){
         $log.error('Nie udało się pobrać listy zdjęć' + error);
-    });
-
-     $('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      arrows: false,
-      asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true
     });
   });

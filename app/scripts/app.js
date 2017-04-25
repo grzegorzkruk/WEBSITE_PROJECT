@@ -58,7 +58,7 @@ angular
                 controller: 'ContactCtrl'
             })
             .state('realisations', {
-                url: '/contact',
+                url: '/realisations',
                 templateUrl: 'views/realisations.html',
                 controller: 'RealisationsCtrl'
             })
