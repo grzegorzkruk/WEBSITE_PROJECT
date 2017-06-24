@@ -5,7 +5,7 @@ angular.module('ekoWebSite')
     return {
         restrict: 'E',
         templateUrl: function(element, attr) {
-            return 'views/svg-icons/' + attr.name + '.html';
+            return 'templates/partials/svg-icons/' + attr.name + '.html';
         }
     };
 });

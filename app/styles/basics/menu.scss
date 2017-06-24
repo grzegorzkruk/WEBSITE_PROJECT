@@ -11,7 +11,7 @@ body {
     z-index: 9001;
     background-color: rgba(0, 0, 0, 0.6);
     text-align: right;
-    transition: all .5s;
+    transition: height .5s;
     &-links {
         position: relative;
         top: 50%;

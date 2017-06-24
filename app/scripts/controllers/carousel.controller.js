@@ -8,7 +8,7 @@
  * Controller of the ekoWebSite
  */
 angular.module('ekoWebSite')
-  .controller('ekoCarouselCtrl', function ($http, $scope, $log) {
+  .controller('ekoCarouselCtrl', function ($http, $scope, $log, EkoCarouselImages) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,10 +16,7 @@ angular.module('ekoWebSite')
     ];
     var vm = this;
     vm.photos = [];
-    $http.get('content/eko-carousel-images.json').then(function (success){
-        $log.info(success.data);
-        $scope.photos = success.data;
-    },function (error){
-        $log.error('Nie udało się pobrać listy zdjęć' + error);
+    EkoCarouselImages.getPhotos().then(function(){
+        vm.photos = EkoCarouselImages.photos;
     });
   });

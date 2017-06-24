@@ -4,6 +4,6 @@ angular.module('ekoWebSite')
     .directive('ekoFooter', function () {
         return {
             restrict: 'E',
-            templateUrl: 'views/footer.html'
+            templateUrl: 'templates/partials/footer.html'
         };
     });
