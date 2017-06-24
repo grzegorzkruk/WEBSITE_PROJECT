@@ -1,17 +1,21 @@
 'use strict';
 
-function SmoothWheelScroll(step, speed, easing) {
-    this.$document = document;
-    this.$window = window;
+function SmoothWheelScroll(options) {
+    this.$document = $(document);
+    this.$window = $(window);
     this.$body = $('html, body');
-    this.easing = function(x, t, b, c, d) {
-        return -c * ((t = t / d - 1) * t * t * t - 1) + b;
-    };
-    this.option = easing || this.easing;
-    this.step = step || this.step;
-    this.speed = speed || this.speed;
-    this.root = 0;
     this.scroll = false;
+    this.root = 0;
+    this.options = extend({}, this.options);
+    extend(this.options, options);
+}
+
+SmoothWheelScroll.prototype.options = {
+    easing: function(x, t, b, c, d) {
+        return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+    },
+    step: 200,
+    speed: 800,
 }
 
 SmoothWheelScroll.prototype._init = function() {
@@ -28,12 +32,12 @@ SmoothWheelScroll.prototype._initEvents = function() {
         if (self.scrollY) {
             self.view = self.$window.height();
             if (self.deltaY < 0 || self.detail > 0)
-                self.root = (self.root + self.view) >= self.$document.height() ? self.root : self.root += self.step;
+                self.root = (self.root + self.view) >= self.$document.height() ? self.root : self.root += self.options.step;
             if (self.deltaY > 0 || self.detail < 0)
-                self.root = self.root <= 0 ? 0 : self.root -= self.step;
+                self.root = self.root <= 0 ? 0 : self.root -= self.options.step;
             $body.stop().animate({
                 scrollTop: self.root
-            }, speed, option, function() {
+            }, self.options.speed, self.options.easing, function() {
                 self.scroll = false;
             });
         }

@@ -1,0 +1,29 @@
+.slider{
+  text-align: center;
+  &-for{
+    div{
+      height: 75vh;
+    }
+    img{
+      height: 100%;
+      margin: auto;
+    }
+  }
+  &-nav{
+    div{
+      height: 25vh;
+    }
+    img{
+      height: 100%;
+      margin: auto
+    }
+  }
+}
+
+.slick-prev{
+  transform: translate(200%, 0);
+}
+
+.slick-next{
+  transform: translate(-200%, 0);
+}
