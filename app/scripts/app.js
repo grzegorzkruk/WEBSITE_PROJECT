@@ -16,6 +16,7 @@ angular
         'ui.router',
         'ngSanitize',
         'ngTouch',
+        'slick'
     ])
     .run(function($rootScope, $timeout, $anchorScroll, $window){
         $rootScope.isPageLoading = false;
@@ -63,7 +64,7 @@ angular
             })
             .state('realisations', {
                 url: '/realisations',
-                templateUrl: 'views/realisations.html',
+                templateUrl: 'templates/views/realisations.html',
                 controller: 'RealisationsCtrl'
             })
 

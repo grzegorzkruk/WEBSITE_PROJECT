@@ -1,6 +1,6 @@
 .slider{
   text-align: center;
-  &-for{
+  .slider-for{
     div{
       height: 75vh;
     }
@@ -9,7 +9,17 @@
       margin: auto;
     }
   }
-  &-nav{
+  .slider-nav{
+    .slick-slide{
+      opacity: 0.2;
+      transition: all .5s ease;
+    }
+    .slick-active{
+      opacity: 0.4;
+    }
+    .slick-current{
+      opacity: 1;
+    }
     div{
       height: 25vh;
     }
@@ -19,6 +29,35 @@
     }
   }
 }
+
+@media screen and (max-width: 765px) {
+  .slider{
+    text-align: center;
+    .slider-for{
+      div{
+        height: auto;
+        width: 100vw;
+      }
+      img{
+        height: auto;
+        width: 100%;
+        margin: auto;
+      }
+    }
+    .slider-nav{
+      div{
+        height: auto;
+      }
+      img{
+        height: auto;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
 
 .slick-prev{
   transform: translate(200%, 0);
