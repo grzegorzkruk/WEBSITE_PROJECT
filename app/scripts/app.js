@@ -115,7 +115,7 @@ angular
             .state('home.special', {
                 url: 'home/special',
                 templateUrl: 'templates/views/eko-offer/special.html'
-            })
+            });
 
         $urlRouterProvider.otherwise('/');
     });

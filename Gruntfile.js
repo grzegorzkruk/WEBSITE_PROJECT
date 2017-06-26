@@ -224,7 +224,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -376,7 +376,7 @@ module.exports = function (grunt) {
           usemin: 'scripts/scripts.js'
         },
         cwd: '<%= yeoman.app %>',
-        src: 'views/{,*/}*.html',
+        src: 'templates/{,*/}*.html',
         dest: '.tmp/templateCache.js'
       }
     },
@@ -485,8 +485,7 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:test',
     'postcss',
-    'connect:test',
-    'karma'
+    'connect:test'
   ]);
 
   grunt.registerTask('build', [
@@ -510,7 +509,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'newer:jshint',
     'newer:jscs',
-    'test',
     'build'
   ]);
 };

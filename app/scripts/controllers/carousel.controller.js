@@ -14,9 +14,8 @@ angular.module('ekoWebSite')
       'AngularJS',
       'Karma'
     ];
-    var vm = this;
-    vm.photos = [];
+    $scope.photos = [];
     EkoCarouselImages.getPhotos().then(function(){
-        vm.photos = EkoCarouselImages.photos;
+        $scope.photos = EkoCarouselImages.photos;
     });
   });
