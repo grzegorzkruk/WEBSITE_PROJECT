@@ -9,7 +9,7 @@ function SVGLoader( el, options ) {
 
 SVGLoader.prototype.options = {
     speedIn : 100,
-    easingIn : mina.linear
+    easingIn : 'ease'
 }
 
 SVGLoader.prototype._init = function() {

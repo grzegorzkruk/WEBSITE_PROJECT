@@ -43,7 +43,7 @@
         }
         td{
             display: block;
-            text-align: right;
+            text-align: left;
             &:nth-child(1) {
                 text-align: center;
                 font-weight: bold;
@@ -51,28 +51,39 @@
             }
         }
         .multiple-price{
-            &:nth-child(2):before {
+            &:nth-child(3):before {
                 content: 'HATCHBACK/COUPE';
                 position: absolute;
                 left: 60px;
             }
-            &:nth-child(3):before {
+            &:nth-child(4):before {
                 content: 'SEDAN/COMBI';
                 position: absolute;
                 left: 60px;
             }
-            &:nth-child(4):before {
+            &:nth-child(5):before {
                 content: 'SUV';
                 position: absolute;
                 left: 60px;
             }
         }
         .one-price{
-            &:nth-child(2):before {
+            &:nth-child(3):before {
                 content: '';
                 position: absolute;
                 left: 60px;
             }
+        }
+        .table-section{
+            text-align: center;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .table-name{
+            text-align: center;
+            font-weight: bold;
+            color: red;
         }
     }
 }
