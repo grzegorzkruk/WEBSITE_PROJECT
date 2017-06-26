@@ -16,6 +16,7 @@ angular
         'ui.router',
         'ngSanitize',
         'ngTouch',
+        'slick'
     ])
     .run(function($rootScope, $timeout, $anchorScroll){
         $rootScope.isPageLoading = false;

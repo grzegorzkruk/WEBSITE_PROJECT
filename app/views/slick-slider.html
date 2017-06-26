@@ -1,6 +1,28 @@
-<div class="slider slider-for">
+<!--<div class="slider slider-for">
   <div ng-repeat="image in images"><img ng-src="{{image.src}}"/></div>
 </div>
 <div class="slider slider-nav">
   <div ng-repeat="image in images"><img ng-src="{{image.src}}"/></div>
-</div>
+</div>-->
+
+<slick class="slider slider-for" infinite="true" slides-to-show="1" slides-to-scroll="1" as-nav-for=".slider-nav">
+  <div><img src="assets/1.png"/></div>
+  <div><img src="assets/2.png"/></div>
+  <div><img src="assets/3.png"/></div>
+  <div><img src="assets/4.png"/></div>
+  <div><img src="assets/5.png"/></div>
+  <div><img src="assets/6.png"/></div>
+  <div><img src="assets/7.png"/></div>
+  <div><img src="assets/8.png"/></div>
+</slick>
+
+<slick class="slider slider-nav" infinite="true" slides-to-show="1" slides-to-scroll="1" as-nav-for=".slider-for">
+  <div><img src="assets/1.png"/></div>
+  <div><img src="assets/2.png"/></div>
+  <div><img src="assets/3.png"/></div>
+  <div><img src="assets/4.png"/></div>
+  <div><img src="assets/5.png"/></div>
+  <div><img src="assets/6.png"/></div>
+  <div><img src="assets/7.png"/></div>
+  <div><img src="assets/8.png"/></div>
+</slick>
