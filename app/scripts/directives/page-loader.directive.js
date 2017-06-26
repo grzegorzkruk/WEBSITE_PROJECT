@@ -18,7 +18,7 @@ angular.module('ekoWebSite')
         };
         return {
             restrict: 'E',
-            templateUrl: 'views/page-loader.html',
+            templateUrl: 'templates/partials/page-loader.html',
             link: link
         };
     });

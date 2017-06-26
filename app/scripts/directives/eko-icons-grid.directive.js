@@ -5,7 +5,7 @@ angular.module('ekoWebSite')
         return {
             restrict: 'E',
             scope: {},
-            templateUrl: 'views/eko-icons-grid.html',
+            templateUrl: 'templates/partials/eko-icons-grid.html',
             controller: 'ekoIconsGridCtrl'
         };
     });

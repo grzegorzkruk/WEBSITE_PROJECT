@@ -4,6 +4,6 @@ angular.module('ekoWebSite')
     .directive('ekoDialer', function() {
         return {
             restrict: 'E',
-            templateUrl: 'views/dialer.html',
+            templateUrl: 'templates/partials/dialer.html',
         };
     });

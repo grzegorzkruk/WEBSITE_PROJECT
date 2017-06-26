@@ -4,7 +4,7 @@ angular.module('ekoWebSite')
     .directive('ekoMenu', function($window) {
         return {
             restrict: 'E',
-            templateUrl: 'views/menu.html',
+            templateUrl: 'templates/partials/menu.html',
             controller: 'MenuCtrl',
             link: function(scope, element, attr) {
                 angular.element($window).bind('scroll', function() {

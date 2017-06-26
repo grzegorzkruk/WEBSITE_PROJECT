@@ -23,7 +23,7 @@ angular.module('ekoWebSite')
         };
         return {
             restrict: 'E',
-            templateUrl: 'views/slick-slider.html',
+            templateUrl: 'templates/partials/slick-slider.html',
             scope:{
                 images: '='
             },
